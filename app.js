@@ -1,12 +1,14 @@
 /**
- * Decreases the counter by 1.
+ * Decreases the counter by 1, stopping when it reaches 0.
  *
  * @format
  */
 
 function decreaseScore() {
   const display = document.querySelector(".display");
-  display.textContent = Number(display.textContent) - 1;
+  let num = Number(display.textContent) - 1;
+  num = num >= 0 ? num : 0;
+  display.textContent = num;
 }
 
 /**
@@ -25,13 +27,21 @@ function resetScore() {
   display.textContent = 0;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const decrease = document.querySelector(".decrease");
-  decrease.addEventListener("click", decreaseScore);
+/**
+ * Starts the counter app that allows users to keep track of small values and
+ * adds event listeners for user input.
+ */
+function startApp() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const decrease = document.querySelector(".decrease");
+    decrease.addEventListener("click", decreaseScore);
 
-  const increase = document.querySelector(".increase");
-  increase.addEventListener("click", increaseScore);
+    const increase = document.querySelector(".increase");
+    increase.addEventListener("click", increaseScore);
 
-  const reset = document.querySelector(".reset");
-  reset.addEventListener("click", resetScore);
-});
+    const reset = document.querySelector(".reset");
+    reset.addEventListener("click", resetScore);
+  });
+}
+
+startApp();
