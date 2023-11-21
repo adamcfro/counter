@@ -6,27 +6,27 @@ body {
 
 .container {
   height: 100svh;
-  background-color: #E7EFF4;
   display: flex;
   flex-direction: column;
   justify-content: center;
   touch-action: manipulation;
+  background-color: #E7EFF4;
 }
 
 .header {
-  font-size: 60px;
   margin: 0;
   display: flex;
   justify-content: center;
   text-align: center;
+  font-size: 60px;
 }
 
 .display {
-  color: green;
-  font-size: 60px;
+  padding: 1em;
   display: flex;
   justify-content: center;
-  padding: 1em;
+  font-size: 60px;
+  color: green;
 }
 
 .buttons {
@@ -35,11 +35,11 @@ body {
 }
 
 .btn {
-  color: black;
-  background-color: #E7EFF4;
   padding: 6px 10px;
   margin: 0 8px;
   border: solid black 1px;
   border-radius: 5px;
   box-shadow: 1px 1px;
+  color: black;
+  background-color: #E7EFF4;
 }
