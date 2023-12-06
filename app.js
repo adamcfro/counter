@@ -3,7 +3,6 @@
  *
  * @format
  */
-
 function decreaseScore() {
   const display = document.querySelector(".display");
   let num = Number(display.textContent) - 1;
